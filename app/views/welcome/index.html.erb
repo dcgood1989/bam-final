@@ -1,0 +1,23 @@
+<% @magazines.each do |magazine| %>
+<%= link_to magazine.title, magazine_path(magazine) %>
+<% end %>
+<%= link_to "New Magazine", new_magazine_path %>
+<% if current_user %>
+<%= link_to "Sign Out", sign_out_path %>
+  <%= "Logged in as Sample User" %>
+<% else %>
+  <%= link_to "Sign In", sign_in_path %>
+  <%= link_to "Sign Up", new_user_path %>
+<% end %>
+
+
+<% if Magazine.exists? %>
+   magazines exists
+   Browsing All Magazines
+<% else %>
+   There are currently no magazines
+
+
+
+
+<% end %>

@@ -1,0 +1,7 @@
+<%= link_to "View All Magazines", '/' %>
+
+
+<%= "Currently Viewing #{@magazine.title} Edition #{@magazine.edition}. Published #{@magazine.issue.strftime("%m/%d/%Y")} in #{@magazine.language}" %>
+
+<%= link_to "Edit", edit_magazine_path %>
+<%= link_to "Delete Magazine", magazine_path(@magazine), method: :delete %>

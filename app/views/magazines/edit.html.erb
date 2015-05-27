@@ -1,0 +1,22 @@
+<%= form_for @magazine do |f| %>
+<% if @magazine.errors.any? %>
+  <% @magazine.errors.full_messages do |message| %>
+<%= message %>
+<% end %>
+
+<% end %>
+
+<%= f.label :title, "Title" %>
+<%= f.text_field :title %>
+
+<%= f.label :edition, "Edition" %>
+<%= f.number_field :edition %>
+
+<%= f.label :issue, "Issue" %>
+<%= f.date_field :issue %>
+
+<%= f.label :language, "Language" %>
+<%= f.text_field :language %>
+
+<%= f.submit "Update Magazine" %>
+<% end %>
